@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Medical IDW</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="glass-white">
+      <div class="header-content-container">
+        <div>
+          <button id="burgerButton">
+            <!-- Burger SVG -->
+            <svg
+              id="burgerIcon"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect y="4" width="24" height="2" fill="#000" rx="1"></rect>
+              <rect y="11" width="24" height="2" fill="#000" rx="1"></rect>
+              <rect y="18" width="24" height="2" fill="#000" rx="1"></rect>
+            </svg>
+
+            <!-- X SVG -->
+            <svg
+              id="closeIcon"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+              style="display: none"
+            >
+              <line
+                x1="4"
+                y1="4"
+                x2="20"
+                y2="20"
+                stroke="#000"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+              <line
+                x1="20"
+                y1="4"
+                x2="4"
+                y2="20"
+                stroke="#000"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+            </svg>
+          </button>
+        </div>
+
+        <nav id="mainNavMenu">
+          <ul>
+            <li>
+              <a href="contacto/contacto.html">Contacto</a>
+            </li>
+            <li id="headerTitlePrimary">
+              <a href="index.html"><h1>Medical IDW</h1></a>
+            </li>
+            <li>
+              <a href="institucional/institucional.html">Institucional</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div>
+          <a href="index.html" id="headerTitleSecondary">
+            <h1>Medical IDW</h1>
+          </a>
+        </div>
+      </div>
+    </header>
+    <div id="backdrop" class="hidden"></div>
+    <main>
+      <h2>Main</>
+    </main>
+    <footer>Footer</footer>
+  </body>
+</html>
+
+<script src="scripts/burgerMenu.js"></script>
