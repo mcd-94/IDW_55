@@ -1,17 +1,11 @@
-<!-- Home Page -->
-
 <!doctype html>
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Medical IDW</title>
-    <link rel="stylesheet" href="styles/global.css" />
-    <link rel="stylesheet" href="styles/index.css"
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    />
+    <title>Especialidades</title>
+    <link rel="stylesheet" href="../../styles/global.css" />
+    <link rel="stylesheet" href="../../styles/especialidades.css" />
   </head>
   <body>
     <header class="glass-white-5px">
@@ -63,45 +57,46 @@
         <nav id="mainNavMenu">
           <ul>
             <li class="glass-white-1px" id="headerTitlePrimary">
-              <a href="index.html"><h1>Medical IDW</h1></a>
+              <a href="../../index.html"><h1>Medical IDW</h1></a>
             </li>
             <li>
-              <a href="pages/especialidades/especialidades.html"
-                >Especialidades</a
-              >
+              <a href="especialidades.html">Especialidades</a>
             </li>
             <li class="glass-white-1px">
-              <a href="pages/contacto/contacto.html">Contacto</a>
+              <a href="../contacto/contacto.html">Contacto</a>
             </li>
             <li class="glass-white-1px">
-              <a href="pages/institucional/institucional.html">Institucional</a>
+              <a href="../institucional/institucional.html">Institucional</a>
             </li>
           </ul>
         </nav>
+
         <div>
-          <a href="index.html" id="headerTitleSecondary">
+          <a href="../../index.html" id="headerTitleSecondary">
             <h1>Medical IDW</h1>
           </a>
         </div>
       </div>
     </header>
-    <!-- Backdrop para cuando se abre el menu en dispositivos móviles -->
     <div id="backdrop" class="hidden"></div>
     <main>
       <section class="hero">
-        <div class="hero-background"></div>
+        <div class="hero-background-especialidades"></div>
         <div class="hero-content glass-white-3px">
-          <img src="assets/logos/logoCompletoSF.png" class="hero-logo" />
-          <a href="#" class="booking-link">RESERVAR TURNO</a>
+          <h2 class="hero-title"><b>Especialidades</b></h2>
+          <img src="../../assets/logos/logoCompletoSF.png" class="hero-logo" />
+          <!-- <a href="#" class="booking-link">RESERVAR TURNO</a> -->
         </div>
       </section>
+
+      <!-- Ingresar marcado de Especialidades abajo de este comentario -->
+      <!-- Ingresar marcado de Especialidades sobre este comentario -->
     </main>
 
     <footer>
       <div class="left-side">
-        <!-- Logo -->
         <img
-          src="assets/logos/logoSF.png"
+          src="../../assets/logos/logoSF.png"
           alt="Logotipo de Medical IDW"
           width="96"
         />
@@ -110,7 +105,6 @@
         <nav>
           <h3><b>Especialidades</b></h3>
           <ul>
-            <!--Añadir enlaces a las páginas correspondientes-->
             <li>Cardiología</li>
             <li>Oftalmología</li>
             <li>Odontología</li>
@@ -137,5 +131,4 @@
     </footer>
   </body>
 </html>
-
-<script src="scripts/burgerMenu.js"></script>
+<script src="../../scripts/burgerMenu.js"></script>

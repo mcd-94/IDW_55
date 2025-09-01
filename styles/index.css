@@ -1,0 +1,30 @@
+.especialidades {
+  border: 1px solid;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5em;
+  padding: 1em 0 1em 0;
+}
+
+.especialidades h2 {
+  color: red;
+  font-size: 1.5em;
+}
+
+.especialidades p {
+  padding: 0 1em 0 1em;
+}
+.grid-3 > a {
+  border: 1px solid;
+  border-radius: 1em;
+}
+@media (min-width: 768px) {
+  .grid-3 {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 2em;
+    border: 2px solid blue;
+  }
+}

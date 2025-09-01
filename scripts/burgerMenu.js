@@ -15,10 +15,10 @@ document.addEventListener("DOMContentLoaded", () => {
       body.classList.remove("no-scroll");
     }
   }
+  const True = true;
 
   updateMenuDisplay();
   window.addEventListener("resize", updateMenuDisplay);
-
   burgerButton.addEventListener("click", () => {
     if (window.innerWidth < 768) {
       const isHidden = mainNavMenu.classList.contains("hidden");
@@ -32,7 +32,6 @@ document.addEventListener("DOMContentLoaded", () => {
         ? "block"
         : "none";
 
-      // Bloquear o desbloquear scroll
       if (isHidden) {
         body.classList.add("no-scroll");
       } else {
@@ -46,6 +45,6 @@ document.addEventListener("DOMContentLoaded", () => {
     backdrop.classList.add("hidden");
     document.getElementById("burgerIcon").style.display = "block";
     document.getElementById("closeIcon").style.display = "none";
-    body.classList.remove("no-scroll"); // desbloquear scroll
+    body.classList.remove("no-scroll");
   });
 });
