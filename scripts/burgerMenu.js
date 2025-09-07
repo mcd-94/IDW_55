@@ -1,4 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
+  const headerContentContainer = document.getElementById(
+    "headerContentContainer",
+  );
   const burgerButton = document.getElementById("burgerButton");
   const mainNavMenu = document.getElementById("mainNavMenu");
   const backdrop = document.getElementById("backdrop");
@@ -15,10 +18,13 @@ document.addEventListener("DOMContentLoaded", () => {
       body.classList.remove("no-scroll");
     }
   }
-  const True = true;
 
   updateMenuDisplay();
+
   window.addEventListener("resize", updateMenuDisplay);
+
+  const isMenuOpen = false;
+
   burgerButton.addEventListener("click", () => {
     if (window.innerWidth < 768) {
       const isHidden = mainNavMenu.classList.contains("hidden");
@@ -34,8 +40,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
       if (isHidden) {
         body.classList.add("no-scroll");
+        headerContentContainer.style.borderBottomLeftRadius = 0;
+        headerContentContainer.style.borderBottomRightRadius = 0;
       } else {
         body.classList.remove("no-scroll");
+        headerContentContainer.style.borderBottomLeftRadius = "0.5em";
+        headerContentContainer.style.borderBottomRightRadius = "0.5em";
       }
     }
   });
@@ -45,6 +55,8 @@ document.addEventListener("DOMContentLoaded", () => {
     backdrop.classList.add("hidden");
     document.getElementById("burgerIcon").style.display = "block";
     document.getElementById("closeIcon").style.display = "none";
+    headerContentContainer.style.borderBottomLeftRadius = "0.5em";
+    headerContentContainer.style.borderBottomRightRadius = "0.5em";
     body.classList.remove("no-scroll");
   });
 });
