@@ -14,9 +14,32 @@
     />
   </head>
   <body>
-    <header class="glass-white-5px">
-      <div class="header-content-container">
+   <header>
+      <div class="header-content-container" id="headerContentContainer">
+
         <div>
+          <a href="index.html">
+            <img src="assets/logos/logoHeader.png" id="logoHeader"/>
+          </a>
+        </div>
+
+        <nav id="mainNavMenu">
+          <ul>
+            <li class="menu-element">
+              <a href="pages/especialidades/especialidades.html"
+                >Especialidades</a
+              >
+            </li>
+            <li class="menu-element">
+              <a href="pages/contacto/contacto.html">Contacto</a>
+            </li>
+            <li class="menu-element">
+              <a href="pages/institucional/institucional.html">Institucional</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="burger-button-container">
           <button id="burgerButton">
             <!-- Burger SVG -->
             <svg
@@ -26,9 +49,9 @@
               viewBox="0 0 24 24"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <rect y="4" width="24" height="2" fill="#000" rx="1"></rect>
-              <rect y="11" width="24" height="2" fill="#000" rx="1"></rect>
-              <rect y="18" width="24" height="2" fill="#000" rx="1"></rect>
+              <rect y="4" width="24" height="2" fill="#ffffff" rx="1"></rect>
+              <rect y="11" width="24" height="2" fill="#ffffff" rx="1"></rect>
+              <rect y="18" width="24" height="2" fill="#ffffff" rx="1"></rect>
             </svg>
             <!-- X SVG -->
             <svg
@@ -44,7 +67,7 @@
                 y1="4"
                 x2="20"
                 y2="20"
-                stroke="#000"
+                stroke="#ffffff"
                 stroke-width="2"
                 stroke-linecap="round"
               />
@@ -53,36 +76,14 @@
                 y1="4"
                 x2="4"
                 y2="20"
-                stroke="#000"
+                stroke="#ffffff"
                 stroke-width="2"
                 stroke-linecap="round"
               />
             </svg>
           </button>
         </div>
-        <nav id="mainNavMenu">
-          <ul>
-            <li class="glass-white-1px" id="headerTitlePrimary">
-              <a href="index.html"><h1>Medical IDW</h1></a>
-            </li>
-            <li>
-              <a href="pages/especialidades/especialidades.html"
-                >Especialidades</a
-              >
-            </li>
-            <li class="glass-white-1px">
-              <a href="pages/contacto/contacto.html">Contacto</a>
-            </li>
-            <li class="glass-white-1px">
-              <a href="pages/institucional/institucional.html">Institucional</a>
-            </li>
-          </ul>
-        </nav>
-        <div>
-          <a href="index.html" id="headerTitleSecondary">
-            <h1>Medical IDW</h1>
-          </a>
-        </div>
+
       </div>
     </header>
     <!-- Backdrop para cuando se abre el menu en dispositivos móviles -->
