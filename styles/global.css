@@ -178,7 +178,46 @@ header ul {
 .booking-link:hover {
   background-color: #e04848;
 }
+/* FOOTER */
+footer {
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
 
+.footer-content {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 1em;
+}
+
+.footer-logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer-logo-container img {
+  width: 200px;
+  height: auto;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+.footer-links h3 {
+  font-weight: bold;
+}
+.copyright {
+  border-top: 2px solid;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 /* <Media Query para pantallas a partir de 768px de ancho > */
 @media (min-width: 768px) {
   header nav {
@@ -214,6 +253,35 @@ header ul {
 
   .hero-logo {
     max-width: 500px;
+  }
+   footer {
+    gap: 3em;
+    padding-top: 3em;
+  }
+
+  .footer-content {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .footer-links {
+    flex-direction: row;
+    gap: 3em;
+  }
+
+  .footer-links h3 {
+    font-size: 1.2em;
+  }
+
+  .footer-links ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+  }
+
+  .copyright {
+    display: flex;
+    flex-direction: row;
   }
 }
 /* </ Media Query para pantallas a partir de 768px de ancho > */
