@@ -217,6 +217,7 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 0.5em;
 }
 /* <Media Query para pantallas a partir de 768px de ancho > */
 @media (min-width: 768px) {
@@ -254,7 +255,7 @@ footer {
   .hero-logo {
     max-width: 500px;
   }
-   footer {
+  footer {
     gap: 3em;
     padding-top: 3em;
   }
