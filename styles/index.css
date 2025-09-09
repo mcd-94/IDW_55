@@ -61,6 +61,34 @@
   display: block;
 }
 
+/* OBRAS SOCIALES */
+.obras {
+  text-align: center;
+  background: rgb(250, 248, 248);
+  padding: 1em;
+}
+.obras-img {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5em;
+}
+.obras h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #005f99;
+}
+
+.obras img {
+  width: 140px;
+  height: auto;
+}
+
+.obras img:hover {
+  transform: scale(1.1);
+}
+
 @media (min-width: 768px) {
   .specialties-header {
     padding: 0 3em;
@@ -68,5 +96,12 @@
   .specialties-card-container {
     display: grid;
     grid-template-columns: auto auto auto;
+  }
+
+  .obras-img {
+    display: flex;
+    gap: 0.5em;
+    padding: 1em;
+    overflow: hidden;
   }
 }
