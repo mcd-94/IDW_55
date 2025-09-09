@@ -7,16 +7,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contacto</title>
     <link rel="stylesheet" href="../../styles/global.css" />
-    <link rel="stylesheet" href="../../styles/contacto.css"/>
+    <link rel="stylesheet" href="../../styles/contacto.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
+    <link rel="icon" href="../../assets/logos/favicon.ico" type="image/x-icon" />
   </head>
   <body>
-    <header class="glass-white-5px">
-      <div class="header-content-container">
+    <header>
+      <div class="header-content-container" id="headerContentContainer">
         <div>
+          <a href="../../index.html">
+            <img src="../../assets/logos/logoHeader.png" id="logoHeader" />
+          </a>
+        </div>
+
+        <nav id="mainNavMenu">
+          <ul>
+            <li class="menu-element">
+              <a href="../especialidades/especialidades.html">Especialidades</a>
+            </li>
+            <li class="menu-element">
+              <a href="contacto.html">Contacto</a>
+            </li>
+            <li class="menu-element">
+              <a href="../institucional/institucional.html">Institucional</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="burger-button-container">
           <button id="burgerButton">
             <!-- Burger SVG -->
             <svg
@@ -26,9 +47,9 @@
               viewBox="0 0 24 24"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <rect y="4" width="24" height="2" fill="#000" rx="1"></rect>
-              <rect y="11" width="24" height="2" fill="#000" rx="1"></rect>
-              <rect y="18" width="24" height="2" fill="#000" rx="1"></rect>
+              <rect y="4" width="24" height="2" fill="#ffffff" rx="1"></rect>
+              <rect y="11" width="24" height="2" fill="#ffffff" rx="1"></rect>
+              <rect y="18" width="24" height="2" fill="#ffffff" rx="1"></rect>
             </svg>
             <!-- X SVG -->
             <svg
@@ -44,7 +65,7 @@
                 y1="4"
                 x2="20"
                 y2="20"
-                stroke="#000"
+                stroke="#ffffff"
                 stroke-width="2"
                 stroke-linecap="round"
               />
@@ -53,70 +74,58 @@
                 y1="4"
                 x2="4"
                 y2="20"
-                stroke="#000"
+                stroke="#ffffff"
                 stroke-width="2"
                 stroke-linecap="round"
               />
             </svg>
           </button>
         </div>
-        <nav id="mainNavMenu">
-          <ul>
-            <li class="glass-white-1px" id="headerTitlePrimary">
-              <a href="../../index.html"><h1>Medical IDW</h1></a>
-            </li>
-            <li>
-              <a href="../especialidades/especialidades.html">Especialidades</a>
-            </li>
-            <li class="glass-white-1px">
-              <a href="contacto.html">Contacto</a>
-            </li>
-            <li class="glass-white-1px">
-              <a href="../institucional/institucional.html">Institucional</a>
-            </li>
-          </ul>
-        </nav>
-
-        <div>
-          <a href="../../index.html" id="headerTitleSecondary">
-            <h1>Medical IDW</h1>
-          </a>
-        </div>
       </div>
     </header>
     <div id="backdrop" class="hidden"></div>
     <main>
-      <section class="hero">
+      <!-- <section class="hero"> -->
+      <!--   <div class="hero-background-contacto"></div> -->
+      <!--   <div class="hero-content glass-white-1px"> -->
+      <!--     <h2 class="hero-title"><b>Contacto</b></h2> -->
+      <!--     <img src="../../assets/logos/logoCompletoSF.png" class="hero-logo" /> -->
+      <!--     <!-- <a href="#" class="booking-link">RESERVAR TURNO</a> --> 
+      <!--   </div> -->
+      <!-- </section> -->
+ <section class="hero">
         <div class="hero-background-contacto"></div>
-        <div class="hero-content glass-white-3px">
+        <div class="hero-content glass-black-1px">
           <h2 class="hero-title"><b>Contacto</b></h2>
-          <img src="../../assets/logos/logoCompletoSF.png" class="hero-logo" />
-          <!-- <a href="#" class="booking-link">RESERVAR TURNO</a> -->
+          <p>Estamos para ayudarte; contáctanos y te respondemos en menos de 24 horas.</p>
+          <!-- <img src="../../assets/logos/logoCompletoSF.png" class="hero-logo" /> -->
+          <a href="#" class="booking-link">RESERVAR TURNO</a>
         </div>
       </section>
-
-
-       <h3 class=" titulo">Solicitá tu consulta ahora</h3>
+      <h3 class="titulo">Solicitá tu consulta ahora</h3>
       <section class="contacto">
-        <h4 class=" stitulo">Contacto</h4>
-        <hr class=" linea">
-        <p id="pcontacto">Completá el siguiente formulario para contactarte con nosotros. Responderemos a la brevedad</p>
+        <h4 class="stitulo">Contacto</h4>
+        <hr class="linea" />
+        <p id="pcontacto">
+          Completá el siguiente formulario para contactarte con nosotros.
+          Responderemos a la brevedad
+        </p>
         <form>
           <div class="form">
             <label for="nombre">Nombre completo:</label>
-            <input type="text" class="imp" name="nombre">
+            <input type="text" class="imp" name="nombre" />
           </div>
           <div class="form">
             <label for="mail">Correo electrónico:</label>
-            <input type="text" class="imp" name="mail">
+            <input type="text" class="imp" name="mail" />
           </div>
           <div class="form">
             <label for="asunto">Asunto:</label>
-            <input type="text" class="imp" name="asunto">
+            <input type="text" class="imp" name="asunto" />
           </div>
           <div class="form">
             <label for="mensaje">Mensaje:</label>
-            <input type="text" id="mensaje" name="mensaje">
+            <input type="text" id="mensaje" name="mensaje" />
           </div>
           <button type="submit" class="boton">Enviar</button>
         </form>
@@ -147,45 +156,86 @@
             <img src="../../assets/portadas/direccion.png">
           </a>
         </div>
-
-
       </section>
     </main>
 
-    <footer>
-      <div class="left-side">
-        <img
-          src="../../assets/logos/logoSF.png"
-          alt="Logotipo de Medical IDW"
-          width="96"
-        />
+ <footer>
+      <div class="footer-content">
+        <div class="footer-logo-container">
+          <img src="../../assets/logos/logoCompletoSF.png">
+        </div>
+        <div class="footer-links">
+          <div>
+            <h3>Nuestras Especialidades</h3>
+              <nav>
+              <ul>
+                <li>
+                  <a href="#">Oftalmología</a>
+                </li>
+                  <li>
+                  <a href="#">Cardiología</a>
+                </li>
+                 <li>
+                   <a href="#">Odontología</a>
+                </li>
+                <li>
+                  <a href="#">Traumatología</a>
+                </li>
+                <li>
+                  <a href="#">Neurología</a>
+                </li>
+                 <li>
+                  <a href="#">Ginecología y Obstetricia</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div>
+            <h3>Servicios Adicionales</h3>
+            <nav>
+              <ul>
+                <li>
+                  <a href="#">Laboratorio</a>
+                </li>
+                  <li>
+                  <a href="#">Medicicina Deportiva</a>
+                </li>
+                 <li>
+                   <a href="#">Telemedicina</a>
+                </li>
+                <li>
+                  <a href="#">Rehabilitación Online</a>
+                </li>
+                <li>
+                  <a href="#">Cirugia Robotica</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div>
+            <h3>Contacto</h3>
+            <nav>
+              <ul>
+                <li>
+                  <p>Dirección: Av. Mendoza 2301, Rio Gallegos - Santa Cruz</p>
+                </li>
+                <li>
+                  <p>Horarios: Lunes a Sábados 08:00 a 20:00</p>
+                </li>
+                <li>
+                  <p>Whatsapp: 2978451223</p>
+                </li>
+                <li>
+                  <p>Correo Electronico: Medicalidw@gmail.com</p>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
       </div>
-      <div class="right-side">
-        <nav>
-          <h3><b>Especialidades</b></h3>
-          <ul>
-            <li>Cardiología</li>
-            <li>Oftalmología</li>
-            <li>Odontología</li>
-          </ul>
-        </nav>
-        <nav>
-          <h3><b>Servicios</b></h3>
-          <ul>
-            <li>Lorem</li>
-            <li>Lorem</li>
-            <li>Lorem</li>
-          </ul>
-        </nav>
-        <nav>
-          <h3><b>Contacto</b></h3>
-          <ul>
-            <li>
-              <a>Email: info@medicalidw.com</a>
-            </li>
-            <li>Teléfono: (123) 456-7890</li>
-          </ul>
-        </nav>
+      <div class="copyright">
+        <p>© MedicalIDW - Clínica Médica</p>
+        <p>Introducción al Desarrollo Web - 2025</p>
       </div>
     </footer>
   </body>
