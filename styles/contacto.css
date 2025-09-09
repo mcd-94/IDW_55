@@ -1,3 +1,6 @@
+body {
+  background: url(../assets/backgrounds/fondo.jpg);
+}
 /* NO TOCAR ESTA CLASE */
 .hero-background-contacto {
   position: absolute;
@@ -8,7 +11,6 @@
   background-image: url("../assets/portadas/portadaContacto.webp");
   background-blend-mode: darken;
   background-color: rgba(0, 0, 0, 0.4);
-
   background-size: cover;
   background-position: center;
 }
@@ -24,6 +26,7 @@
   padding: 20px;
   margin: 20px auto;
   box-sizing: border-box;
+  border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   background-color: white;
   position: relative;
@@ -33,9 +36,9 @@
   padding: 20px;
   margin: 20px auto;
   box-sizing: border-box;
+  border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   background-color: white;
-  position: relative;
   display: flex;
   flex-direction: column;
   gap: 1cm;
@@ -69,34 +72,38 @@
 }
 
 .boton{
-  background-color: #4A90E2;
-  color: white;
-  border: none;
-  padding: 6px 12px;
-  font-size: 16px;
-  border-radius: 6px;
-  cursor: pointer;  
+  width: fit-content;
+  margin: 20px auto 0;
+  padding: 10px 20px;
+  background: #0077b6;
+  color: #fff;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;  
+}
+.boton:hover {
+  background: #005f8a;
 }
 
 .stitulo{
-  font-size: 19px;
+  font-size: 25px;
   font-weight: bold;
 }
 
 .contacto2 .stitulo{
-  font-size: 19px;
+  font-size: 25px;
   font-weight: bold;
   text-align: center;
 }
 
 .linea{
-  border-top: 2px solid #4A90E2;
-  width: 95%;
-  margin-bottom: 10px;
+  width: 100%;
+  border: 2px solid #0077b6;
+  margin: 20px 0px;
 }
 
 #pcontacto{
-  font-size: 15px;
+  font-size: 20px;
   margin-bottom: 10px;
 }
 
@@ -104,7 +111,7 @@
   display: flex;
   align-items: center;
   margin-top: 20px;
-  font-size: 15px;
+  font-size: 17px;
 }
 
 .icono {
@@ -113,7 +120,7 @@
 }
 
 .titulo{
-  font-size: 25px;
+  font-size: 35px;
   margin-bottom: 20px;
   margin-top: 20px;
   text-align: center;
@@ -121,7 +128,7 @@
 }
 
 #mapa{
-  width: 300px;
+  width: 500px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.3);
 }
 @media (min-width: 768px) {
@@ -135,7 +142,7 @@
   padding: 70px;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   gap: 15em;
   }
