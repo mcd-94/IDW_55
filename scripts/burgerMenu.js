@@ -1,21 +1,29 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const headerContentContainer = document.getElementById(
-    "headerContentContainer",
-  );
+  const headerContentContainer = document.getElementById("headerContentContainer");
   const burgerButton = document.getElementById("burgerButton");
   const mainNavMenu = document.getElementById("mainNavMenu");
   const backdrop = document.getElementById("backdrop");
+  const burgerIcon = document.getElementById("burgerIcon");
+  const closeIcon = document.getElementById("closeIcon");
   const body = document.body;
 
+  function setMenuState(open) {
+    mainNavMenu.classList.toggle("hidden", !open);
+    backdrop.classList.toggle("hidden", !open);
+    burgerIcon.classList.toggle("hidden", open);
+    closeIcon.classList.toggle("hidden", !open);
+    body.classList.toggle("no-scroll", open);
+    headerContentContainer.classList.toggle("menu-open", open);
+  }
+
   function updateMenuDisplay() {
-    if (window.innerWidth < 768) {
-      mainNavMenu.classList.add("hidden");
+    const isMobile = window.innerWidth < 768;
+    if (!isMobile) {
+      setMenuState(true);
       backdrop.classList.add("hidden");
       body.classList.remove("no-scroll");
     } else {
-      mainNavMenu.classList.remove("hidden");
-      backdrop.classList.add("hidden");
-      body.classList.remove("no-scroll");
+      setMenuState(false);
     }
   }
 
@@ -23,40 +31,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
   window.addEventListener("resize", updateMenuDisplay);
 
-  const isMenuOpen = false;
-
   burgerButton.addEventListener("click", () => {
-    if (window.innerWidth < 768) {
-      const isHidden = mainNavMenu.classList.contains("hidden");
-      mainNavMenu.classList.toggle("hidden");
-      backdrop.classList.toggle("hidden", !isHidden);
-
-      document.getElementById("burgerIcon").style.display = isHidden
-        ? "none"
-        : "block";
-      document.getElementById("closeIcon").style.display = isHidden
-        ? "block"
-        : "none";
-
-      if (isHidden) {
-        body.classList.add("no-scroll");
-        headerContentContainer.style.borderBottomLeftRadius = 0;
-        headerContentContainer.style.borderBottomRightRadius = 0;
-      } else {
-        body.classList.remove("no-scroll");
-        headerContentContainer.style.borderBottomLeftRadius = "0.5em";
-        headerContentContainer.style.borderBottomRightRadius = "0.5em";
-      }
-    }
+    if (window.innerWidth >= 768) return;
+    const isHidden = mainNavMenu.classList.contains("hidden");
+    setMenuState(isHidden);
   });
 
-  backdrop.addEventListener("click", () => {
-    mainNavMenu.classList.add("hidden");
-    backdrop.classList.add("hidden");
-    document.getElementById("burgerIcon").style.display = "block";
-    document.getElementById("closeIcon").style.display = "none";
-    headerContentContainer.style.borderBottomLeftRadius = "0.5em";
-    headerContentContainer.style.borderBottomRightRadius = "0.5em";
-    body.classList.remove("no-scroll");
-  });
+  backdrop.addEventListener("click", () => setMenuState(false));
 });

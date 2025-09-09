@@ -288,6 +288,23 @@ footer {
 /* </ Media Query para pantallas a partir de 768px de ancho > */
 
 /* <Clases Auxiliares> */
+
+
+/* Handle icons */
+.hidden {
+  display: none !important;
+}
+
+/* Header rounded corners */
+#headerContentContainer {
+  border-bottom-left-radius: 0.5em;
+  border-bottom-right-radius: 0.5em;
+}
+#headerContentContainer.menu-open {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
 .hidden {
   display: none;
 }
