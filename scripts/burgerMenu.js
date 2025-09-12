@@ -19,9 +19,10 @@ document.addEventListener("DOMContentLoaded", () => {
   function updateMenuDisplay() {
     const isMobile = window.innerWidth < 768;
     if (!isMobile) {
-      setMenuState(true);
+      mainNavMenu.classList.remove("hidden");
       backdrop.classList.add("hidden");
       body.classList.remove("no-scroll");
+      headerContentContainer.classList.remove("menu-open");
     } else {
       setMenuState(false);
     }
@@ -32,7 +33,6 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener("resize", updateMenuDisplay);
 
   burgerButton.addEventListener("click", () => {
-    if (window.innerWidth >= 768) return;
     const isHidden = mainNavMenu.classList.contains("hidden");
     setMenuState(isHidden);
   });
