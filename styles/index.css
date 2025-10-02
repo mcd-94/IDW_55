@@ -1,3 +1,7 @@
+body {
+  background: url(../assets/backgrounds/fondo.jpg);
+}
+
 .specialties-section {
   padding: 2em;
 
@@ -18,6 +22,11 @@
   color: #005f99;
 }
 
+.specialties-header p {
+  font-size: 1em;
+  text-align: center;
+  max-width: 850px;
+}
 .specialties-card-container {
   display: flex;
   flex-direction: column;
