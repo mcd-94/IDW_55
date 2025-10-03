@@ -28,7 +28,7 @@
         </div>
 
         <nav id="mainNavMenu">
-          <ul class="m-0">
+          <ul>
             <li class="menu-element">
               <a href="../especialidades/especialidades.html">Especialidades</a>
             </li>
@@ -275,7 +275,7 @@
           <div>
             <h3>Nuestras Especialidades</h3>
             <nav>
-              <ul class="p-0 m-0">
+              <ul>
                 <li><a href="../especialidades/oftalmologia.html">Oftalmología</a></li>
                 <li><a href="../especialidades/cardiologia.html">Cardiología</a></li>
                 <li><a href="../especialidades/odontologia.html">Odontología</a></li>
@@ -288,7 +288,7 @@
           <div>
             <h3>Servicios Adicionales</h3>
             <nav>
-              <ul class="p-0 m-0">
+              <ul>
                 <li><a href="#">Laboratorio</a></li>
                 <li><a href="#">Medicina Deportiva</a></li>
                 <li><a href="#">Telemedicina</a></li>
@@ -300,11 +300,11 @@
           <div>
             <h3>Contacto</h3>
             <nav>
-              <ul class="p-0 m-0">
-                <li><p class="m-0">Dirección: Av. Mendoza 2301, Rio Gallegos - Santa Cruz</p></li>
-                <li><p class="m-0">Horarios: Lunes a Sábados 08:00 a 20:00</p></li>
-                <li><p class="m-0">Whatsapp: 2978451223</p></li>
-                <li><p class="m-0">Correo Electronico: Medicalidw@gmail.com</p></li>
+              <ul>
+                <li><p>Dirección: Av. Mendoza 2301, Rio Gallegos - Santa Cruz</p></li>
+                <li><p>Horarios: Lunes a Sábados 08:00 a 20:00</p></li>
+                <li><p>Whatsapp: 2978451223</p></li>
+                <li><p>Correo Electronico: Medicalidw@gmail.com</p></li>
               </ul>
             </nav>
           </div>
