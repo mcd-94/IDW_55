@@ -203,20 +203,11 @@
     const imgProfesional = document.getElementById('profesional-img');
     imgProfesional.src = datos.imagen;
 
-    const imgProfesionalFicha = document.getElementById('profesional-img');
-    imgProfesionalFicha.src = datos.imagen;
-
     const titleTag = document.getElementById('title');
     titleTag.textContent = datos.nombre
 
     const nombreHtml = document.getElementById('nombre-profesional');
     nombreHtml.innerText = datos.nombre;
-
-    const nombreHtmlFicha = document.getElementById('nombre-profesional');
-    nombreHtmlFicha.innerText = datos.nombre;
-
-    const especialidadHtml = document.getElementById('especialidad-profesional');
-    especialidadHtml.innerText = datos.especialidad;
 
     const especialidadHtmlFicha = document.getElementById('especialidad-profesional');
     especialidadHtmlFicha.innerText = 'Especialidad ' + datos.especialidad;
