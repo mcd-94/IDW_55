@@ -10,7 +10,7 @@
 - Abril Quiroga  
 - Sofía Mohr  
 - Marco Cippitelli  
-
+- Romina Fuentes
 ---
 
 ## Observaciones
@@ -20,3 +20,6 @@ Reiteramos nuestro pedido de continuar con el desarrollo del proyecto únicament
 
 En consecuencia, solicitamos se formalice de manera explícita que el grupo quedará conformado por sus tres integrantes actuales: **Abril Quiroga, Sofía Mohr y Marco Cippitelli**.
 
+Actualización:
+
+ Al día de la fecha, 02 de octubre de 2025, hemos incorporado a Romina Fuentes como integrante del grupo.
