@@ -1,0 +1,206 @@
+
+body {
+  background-image: url('../assets/backgrounds/fondo.jpg')
+}
+table {
+  background: white;
+}
+#btnNuevo {
+
+  padding: 0.3em;
+}
+.actionButtons {
+  display: flex;
+  flex-direction: column; /* Columna: uno sobre otro */
+  gap: 0.5em;             /* Espacio entre botones */
+  align-items: center;     /* Centrar horizontalmente */
+  justify-content: center; /* Centrar verticalmente dentro del contenedor */
+}
+
+.actionButtons > button {
+  width: 100px; /* O el ancho que quieras para ambos */
+  padding: 0.5em 0.5em; /* Espaciado interno */
+  text-align: center; /* Asegura que el texto esté centrado */
+}
+
+.dashboardAdminTitle {
+  font-size: 2em;
+}
+
+.modal-header {
+  display: flex;
+  flex-direction: row;
+  align-items:center;
+  padding: 0.5em;
+}
+#guardarMedico {
+  padding: 0.3em;
+}
+/* ====== BASE STYLES ====== */
+.modal { 
+  display: none; 
+  position: fixed; 
+  top:0; left:0; 
+  width:100%; height:100%; 
+  background: rgba(0,0,0,0.5); 
+  justify-content:center; 
+  align-items:center; 
+}
+.modal-content { 
+  background:white; 
+  padding:20px; 
+  width:300px; 
+  border-radius:5px; 
+  box-shadow:0 4px 10px rgba(0,0,0,0.2);
+}
+.modal-header { 
+  display:flex; 
+  justify-content:space-between; 
+  align-items:center; 
+}
+.modal-body input { 
+  width:100%; 
+  margin-bottom:10px; 
+  padding:5px; 
+}
+.main-content {
+  padding-top: 5em;
+  padding-inline: 1em;
+}
+table {
+  width: 100%;
+  max-width: 1200px; /* límite de ancho para centrar */
+  border-collapse: collapse;
+  margin: 1em auto; /* centrado horizontal */
+  overflow-x: auto;
+  display: block;
+}
+th, td {
+  text-align: left;
+  padding: 0.75em;
+  border-bottom: 1px solid #ddd;
+  border: 1px solid #ddd;
+}
+th {
+  background: #f2f2f2;
+  white-space: nowrap;
+}
+
+/* En pantallas grandes, limitamos ancho y centramos visualmente */
+@media (min-width: 1024px) {
+  table {
+    display: table; /* vuelve a comportamiento normal */
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+  }
+}
+button {
+  cursor: pointer;
+}
+.actionButtons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em;
+}
+
+/* ====== RESPONSIVE ====== */
+
+/* Header and navigation */
+.header-content-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0.5em 1em;
+}
+#mainNavMenu ul {
+  display: flex;
+  gap: 1em;
+  flex-wrap: wrap;
+}
+.burger-button-container {
+  display: none;
+}
+
+/* Dashboard title + buttons */
+.dashboardAdminTitle {
+  text-align: center;
+  font-size: 1.8em;
+  margin-bottom: 0.5em;
+}
+#btnNuevo, #searchInput {
+  display: inline-block;
+  margin: 0.5em 0.5em 1em 0;
+  padding: 0.5em 1em;
+  font-size: 1em;
+}
+#searchInput {
+  max-width: 250px;
+}
+
+/* Tablets (<= 1024px) */
+
+@media (max-width: 1024px) {
+  th, td {
+    padding: 0.5em;
+  }
+  #mainNavMenu ul {
+    gap: 0.5em;
+  }
+}
+
+/* Phones (<= 768px) */
+@media (max-width: 768px) {
+  #mainNavMenu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: #004080;
+    width: 100%;
+    text-align: center;
+    z-index: 1000;
+  }
+  #mainNavMenu ul {
+    flex-direction: column;
+    gap: 1em;
+    padding: 1em 0;
+  }
+  .burger-button-container {
+    display: block;
+  }
+
+  /* Table becomes scrollable */
+  table {
+    display: block;
+    overflow-x: auto;
+  }
+
+  /* Form modal smaller on small screens */
+  .modal-content {
+    width: 90%;
+    max-width: 350px;
+  }
+
+ }
+
+/* Small phones (<= 480px) */
+@media (max-width: 480px) {
+  .dashboardAdminTitle {
+    font-size: 1.4em;
+  }
+  #btnNuevo, #searchInput {
+    width: 100%;
+    max-width: 100%;
+  }
+  th, td {
+    font-size: 0.85em;
+    white-space: nowrap;
+  }
+  button {
+    font-size: 0.9em;
+    padding: 0.4em 0.8em;
+  }
+}
