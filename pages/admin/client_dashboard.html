@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rol Visitante - Medical IDW</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../styles/global.css">
+    <link rel="stylesheet" href="../../styles/client_dashboard.css">
+    <link rel="icon" href="../../assets/logos/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+    </header>
+    <div id="backdrop" class="hidden"></div>
+
+    <main class="client-dashboard">
+        <div class="container py-4">
+            <div class="dashboard-header bg-white rounded shadow-sm p-4 mb-4">
+                <div class="d-flex justify-content-between align-items-center">
+                    <h1 class="h3 mb-0 text-primary">Rol Visitante</h1>
+                    <div class="d-flex align-items-center gap-3">
+                        <span class="fw-bold" id="userName"></span>
+                        <a href="../login/login.html">
+                        <button id="logoutBtn" class="btn btn-outline-danger btn-sm">Cerrar Sesión</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <ul class="nav nav-tabs mb-4" id="dashboardTabs" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="turnos-tab" data-bs-toggle="tab" data-bs-target="#turnos" type="button" role="tab">
+                        Mis Turnos
+                    </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="perfil-tab" data-bs-toggle="tab" data-bs-target="#perfil" type="button" role="tab">
+                        Mi Perfil
+                    </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="solicitar-tab" data-bs-toggle="tab" data-bs-target="#solicitar" type="button" role="tab">
+                        Solicitar Turno
+                    </button>
+                </li>
+            </ul>
+
+            <div class="tab-content" id="dashboardTabContent">
+                <div class="tab-pane fade show active" id="turnos" role="tabpanel">
+                    <div class="card shadow-sm">
+                        <div class="card-header bg-primary text-white">
+                            <h2 class="h5 mb-0">Mis Turnos</h2>
+                        </div>
+                        <div class="card-body">
+                            <div id="turnosList" class="row g-3 justify-content-center">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-pane fade" id="perfil" role="tabpanel">
+                    <div class="card shadow-sm">
+                        <div class="card-header bg-primary text-white">
+                            <h2 class="h5 mb-0">Mi Perfil</h2>
+                        </div>
+                        <div class="card-body">
+                            <form id="profileForm">
+                                <div class="row mb-3">
+                                    <div class="col-md-6">
+                                        <label for="profileName" class="form-label">Nombre completo</label>
+                                        <input type="text" class="form-control" id="profileName" name="name" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="profileEmail" class="form-label">Correo electrónico</label>
+                                        <input type="email" class="form-control" id="profileEmail" name="email" required>
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <div class="col-md-6">
+                                        <label for="profileDocument" class="form-label">Documento</label>
+                                        <input type="text" class="form-control" id="profileDocument" name="document" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="profilePhone" class="form-label">Teléfono</label>
+                                        <input type="tel" class="form-control" id="profilePhone" name="phone" required>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="profilePassword" class="form-label">Nueva contraseña (dejar en blanco para no cambiar)</label>
+                                    <input type="password" class="form-control" id="profilePassword" name="password">
+                                </div>
+                                <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-pane fade" id="solicitar" role="tabpanel">
+                    <div class="card shadow-sm">
+                        <div class="card-header bg-primary text-white">
+                            <h2 class="h5 mb-0">Solicitar Nuevo Turno</h2>
+                        </div>
+                        <div class="card-body">
+                            <form id="solicitarForm">
+                                <div class="row mb-3">
+                                    <div class="col-md-6">
+                                        <label for="solicitarEspecialidad" class="form-label">Especialidad</label>
+                                        <select class="form-select" id="solicitarEspecialidad" name="especialidad" required>
+                                            <option value="">Seleccione una especialidad</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="solicitarMedico" class="form-label">Médico</label>
+                                        <select class="form-select" id="solicitarMedico" name="medico" required>
+                                            <option value="">Seleccione un médico</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <div class="col-md-6">
+                                        <label for="solicitarFecha" class="form-label">Fecha</label>
+                                        <input type="date" class="form-control" id="solicitarFecha" name="fecha" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="solicitarHora" class="form-label">Hora</label>
+                                        <input type="time" class="form-control" id="solicitarHora" name="hora" required>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="solicitarMotivo" class="form-label">Motivo de la consulta</label>
+                                    <textarea class="form-control" id="solicitarMotivo" name="motivo" rows="3"></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Solicitar Turno</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+     <footer>
+      <div class="copyright">
+        <p>© MedicalIDW - Clínica Médica</p>
+        <p>Introducción al Desarrollo Web - 2025</p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../../scripts/burgerMenu.js"></script>
+</body>
+</html>
