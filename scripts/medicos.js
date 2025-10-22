@@ -1,4 +1,4 @@
-export const medicosIniciales = [
+var medicosIniciales = [
   {
     imagen: "../../assets/medicos/Dr. Atanasio Roberto Hasselbach.jpg",
     nombres: "Atanasio Roberto",
