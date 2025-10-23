@@ -13,6 +13,38 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
   />
   <link rel="icon" href="../../assets/logos/favicon.ico" type="image/x-icon" />
+  <style>
+    @media (max-width: 768px) {
+      .ficha-profesional-container {
+        flex-direction: column !important;
+        align-items: center;
+        text-align: center;
+      }
+      
+      #profesional-img {
+        max-width: 200px !important;
+        margin-bottom: 1rem;
+      }
+      
+      .clinicas-container {
+        flex-direction: column !important;
+        width: 100%;
+      }
+      
+      .clinica-card {
+        width: 100% !important;
+        max-width: 400px;
+      }
+      
+      .hero-title {
+        font-size: 1.5rem !important;
+      }
+      
+      .display-4 {
+        font-size: 2rem !important;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -69,42 +101,42 @@
     </section>
 
     <section class="bg-white d-flex text-dark flex-column gap-5 pb-5">
-      <div class="d-flex flex-column align-items-center">
-        <h1 class="display-4 py-5 fw-bold mb-4">FICHA DE PROFESIONAL</h1>
+      <div class="d-flex flex-column align-items-center px-3">
+        <h1 class="display-4 py-5 fw-bold mb-4 text-center">FICHA DE PROFESIONAL</h1>
 
-        <div class="bg-white rounded p-5 py-0 mb-4">
-          <div class="d-flex flex-row gap-5">
-            <div class="d-flex flex-column">
-              <img id="profesional-img" class="img-fluid rounded-4" style="max-width: 300px;" />
+        <div class="bg-white rounded p-4 mb-4 w-100" style="max-width: 900px;">
+          <div class="d-flex flex-column flex-md-row gap-4 ficha-profesional-container align-items-center align-items-md-start">
+            <div class="d-flex flex-column flex-shrink-0">
+              <img id="profesional-img" class="img-fluid rounded-4" style="max-width: 300px; width: 100%;" />
             </div>
             <div class="d-flex flex-column">
-              <h2 id="nombre-profesional" class="mb-2 fw-bold"></h2>
+              <h2 id="nombre-profesional" class="mb-3 fw-bold"></h2>
               <p class="mb-2 h5">Profesional miembro del equipo de Clínica MEDICALIDW.</p>
               <p id="especialidad-profesional" class="mb-0 h5"></p>
             </div>
           </div>
         </div>
       </div>
-      <div class="d-flex flex-column align-items-center">
-        <div class="d-flex flex-row">
-          <div class="d-flex flex-column mb-4">
-            <div class="d-flex flex-column justify-content-center align-items-center bg-white rounded p-4 text-center">
+      
+      <div class="d-flex flex-column align-items-center px-3">
+        <div class="d-flex flex-column flex-md-row gap-4 clinicas-container justify-content-center w-100" style="max-width: 1000px;">
+          <div class="d-flex flex-column mb-4 clinica-card">
+            <div class="d-flex flex-column justify-content-center align-items-center bg-white rounded p-4 text-center shadow-sm">
               <h3 class="fw-bold mb-3">CLÍNICA NORTE</h3>
-              <img src="../../assets/mapas/ubicacion-1.png" class="rounded mb-3" style="height: 200px;" />
-              <p class="mb-0 h4">Lunes a Viernes de 08:00 a 10:00</p>
+              <img src="../../assets/mapas/ubicacion-1.png" class="rounded mb-3 img-fluid" style="max-height: 200px; width: 100%; object-fit: cover;" />
+              <p class="mb-0 h5">Lunes a Viernes de 08:00 a 10:00</p>
             </div>
           </div>
-          <div class="d-flex flex-column mb-4">
-            <div
-              class="d-flex flex-column justify-content-center align-items-center bg-white rounded p-4 text-center flex-center">
+          <div class="d-flex flex-column mb-4 clinica-card">
+            <div class="d-flex flex-column justify-content-center align-items-center bg-white rounded p-4 text-center shadow-sm">
               <h3 class="fw-bold mb-3">CLÍNICA OESTE</h3>
-              <img src="../../assets/mapas/ubicacion-1.png" class="rounded mb-3" style="height: 200px;" />
-              <p class="mb-0 h4">Lunes a Viernes de 15:00 a 18:00</p>
+              <img src="../../assets/mapas/ubicacion-1.png" class="rounded mb-3 img-fluid" style="max-height: 200px; width: 100%; object-fit: cover;" />
+              <p class="mb-0 h5">Lunes a Viernes de 15:00 a 18:00</p>
             </div>
           </div>
         </div>
 
-        <div class="text-center">
+        <div class="text-center mt-3">
           <button class="btn btn-dark btn-lg px-5">SOLICITAR TURNO</button>
         </div>
       </div>
